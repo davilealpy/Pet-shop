@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rações Lua</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/Icone PetShop.jpeg" type="image/x-icon">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: rgb(136, 136, 136);">
+    <header>
+          <div id="blue-effect">
+              <!-- Use any element to open the sidenav -->
+              <span style="background-color: aqua; border-radius: 4px;  display: flex; align-self: flex-end; margin-left: 825px; padding: 4px; " onclick="openNav()"><img style="width: 20px;" src="images/engrenagens.png" alt=""></span>
+              
+              <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+                    
+     
+              <br>
+              <br>
+              <br>
+               <ul style="list-style: none; display: flex; flex-direction: row; justify-content: space-around;">
+                     <li>
+               <h1 class="title" id="title"><span style="color: rgb(12, 12, 76);">Pet</span> Rações</h1>
+                     </li>
+                     <li><img class="icon" style="width: 190px; float: inline-end; border-radius: 100%;" src="images/Icone PetShop.jpeg" alt=""></li>
+               </ul>
+              
+                      <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Início</a>
+                <a href="#">Produtos</a>
+                <a href="#">Carrinho</a>
+                <a href="#">Conta</a>
+              </div>
+              
+                    
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+
+      
+          
+     
+    
+          </div>
+    </header>
+
+    <main >
+        <section id="produtos">
+            <div class="produto">
+                <h2>Ração Gold</h2>
+                <p>R$ 20.00</p>
+                <button data-nome="Ração para Cães" data-preco="20">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h2>Ração Dock</h2>
+                <p>R$ 20.00</p>
+                <button data-nome="Ração para Cães" data-preco="20">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h2>Ração fire</h2>
+                <p>R$ 10.00</p>
+                <button data-nome="Brinquedo para Gatos" data-preco="10">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Outros produtos -->
+        </section>
+
+        <section id="carrinho">
+            <h2>Carrinho</h2>
+            <ul id="lista-carrinho"></ul>
+            <p>Total: €<span id="total">0</span></p>
+            <button id="finalizar-compra">Deletar Todos</button>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+</html>
