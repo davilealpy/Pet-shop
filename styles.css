@@ -6,7 +6,26 @@ body {
     font-family: "Pacifico", cursive;
     font-size: 65px;
     color: rgb(209, 193, 227);
+    position: relative;
+    animation: piscar 0.75s step-end infinite;
+    border-right: 25px;
+}
 
+@keyframes piscar {
+  0% {
+      border-color: transparent;
+  }
+  50% {
+      border-color: black;
+  }
+  100% {
+      border-color: transparent;
+  }
+}
+
+.icon{
+  position: relative;
+  animation: moverCimaBaixo 4s infinite;
 }
 
 header {
@@ -14,15 +33,16 @@ header {
     padding: 10px;
     margin: -8px;
     width: screen;
-    background-image: url(images/Wallpaper\ Header.jpg);
+    background-image: url(images/wallpaper\ Header.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size:cover;    
+    animation: moverCimaBaixo 2s infinite;
 }
 
 #blue-effect{
-    background-color: rgba(40, 40, 204, 0.372);
+    background-color: rgba(17, 17, 89, 0.689);
     margin: -10px;
 }
 
@@ -112,3 +132,14 @@ button:hover {
     .sidenav a {font-size: 18px;}
   }
 
+  @keyframes moverCimaBaixo {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 0;
+    }
+}

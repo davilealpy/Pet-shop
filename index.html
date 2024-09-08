@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rações Lua</title>
+    <title>Pet Rações</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/Icone PetShop.jpeg" type="image/x-icon">
 
@@ -13,10 +13,10 @@
 
 </head>
 <body style="background-color: rgb(136, 136, 136);">
-    <header>
+    <header id="header">
           <div id="blue-effect">
               <!-- Use any element to open the sidenav -->
-              <span style="background-color: aqua; border-radius: 4px;  display: flex; align-self: flex-end; margin-left: 825px; padding: 4px; " onclick="openNav()"><img style="width: 20px;" src="images/engrenagens.png" alt=""></span>
+              <span style="background-color: rgb(121, 149, 149); border-radius: 4px;  display: flex; margin-left: 840px; padding: 4px; " onclick="openNav()"><img style="width: 20px;" src="images/engrenagens.png" alt=""></span>
               
               <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
                     
@@ -24,19 +24,21 @@
               <br>
               <br>
               <br>
-               <ul style="list-style: none; display: flex; flex-direction: row; justify-content: space-around;">
+               <ul style="list-style: none; display: flex; flex-direction: row; justify-content: space-between;">
                      <li>
-               <h1 class="title" id="title"><span style="color: rgb(12, 12, 76);">Pet</span> Rações</h1>
+               <h1 class="title" id="title"></h1>
+
                      </li>
                      <li><img class="icon" style="width: 190px; float: inline-end; border-radius: 100%;" src="images/Icone PetShop.jpeg" alt=""></li>
                </ul>
               
                       <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Início</a>
-                <a href="#">Produtos</a>
-                <a href="#">Carrinho</a>
-                <a href="#">Conta</a>
+                <a href="#header">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#carrinho">Carrinho</a>
+                <a href="conta.html"target='blank'>Conta</a>
+                
               </div>
               
                     
@@ -59,8 +61,8 @@
         <section id="produtos">
             <div class="produto">
                 <h2>Ração Gold</h2>
-                <p>R$ 20.00</p>
-                <button data-nome="Ração para Cães" data-preco="20">Adicionar ao Carrinho</button>
+                <p>R$ 40.00</p>
+                <button data-nome="Ração para Cães" data-preco="40">Adicionar ao Carrinho</button>
             </div>
             <div class="produto">
                 <h2>Ração Dock</h2>
@@ -71,6 +73,11 @@
                 <h2>Ração fire</h2>
                 <p>R$ 10.00</p>
                 <button data-nome="Brinquedo para Gatos" data-preco="10">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h2>Ração Ford</h2>
+                <p>R$ 80.00</p>
+                <button data-nome="Ração para Cães" data-preco="80">Adicionar ao Carrinho</button>
             </div>
             <!-- Outros produtos -->
         </section>
@@ -86,5 +93,23 @@
     <script src="scripts.js"></script>
     
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+        const texto = "Pet Rações";
+        let index = 0;
+        const velocidade = 200; // Velocidade de digitação (em milissegundos)
+    
+        function digitar() {
+            if (index < texto.length) {
+                document.getElementById("title").innerHTML += texto.charAt(index);
+                index++;
+                setTimeout(digitar, velocidade);
+            }
+        }
+    
+        window.onload = function() {
+            digitar();
+        };
+    </script>
 </body>
 </html>
